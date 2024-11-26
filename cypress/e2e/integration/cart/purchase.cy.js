@@ -33,9 +33,13 @@ describe("Automated Test Case", () => {
         cy.get('#address').type('hola123');
         cy.get('#phone').type('123456789');
         cy.get('#email').type('lita@gmail.com');
+        // finalizar compra
         cy.get('.login').click();
+        // Visualizacion de toast verificando que se realizo correctamente la compra
         cy.get('.Toastify__toast-body').should('be.visible');
+        // clickear en el logo para volver al inicio
         cy.get('.img-logo').click();
+        // visualizar el mensaje de bienvenido.
         cy.get('.welcome').should('have.text', 'Bienvenido lita@gmail.com!');
 
         
