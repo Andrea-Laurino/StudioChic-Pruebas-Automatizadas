@@ -1,0 +1,1 @@
+# StudioChic-Pruebas-Automatizadas
