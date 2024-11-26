@@ -1,9 +1,6 @@
-# StudioChic-Pruebas-Automatizadas
-
 <img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <h2 align="center"> StudioChic - Pruebas Automatizadas con Cypress 👩‍💻 </h2>
-
 
 
 <div id="user-content-toc">
@@ -43,9 +40,7 @@ StudioChic es un e-commerce diseñado para ofrecer una experiencia de compra int
 - **GitHub:** Control de versiones y repositorio remoto.
 - **JSON:** Almacenamiento de datos ficticios para las pruebas (fixtures).
 
-## 📂 Estructura del Proyecto
-
-## 📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto 
 
 ```plaintext
 ├── cypress/
