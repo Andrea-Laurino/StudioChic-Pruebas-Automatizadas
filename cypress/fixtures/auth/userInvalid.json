@@ -1,0 +1,12 @@
+[
+    {
+        "email": "andreajlaurino@gmail.com",
+        "password": "123",
+        "expectedError": "Contraseña Incorrecta"
+    },
+    {
+        "email": "lola@gmail",
+        "password": "123clave*",
+        "expectedError": "Usuario no Registrado"
+    }
+]

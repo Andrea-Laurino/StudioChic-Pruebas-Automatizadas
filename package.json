@@ -1,0 +1,20 @@
+{
+  "name": "framework_cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [],
+  "author": "Andrea Laurino",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.16.0"
+  },
+  "dependencies": {
+    "faker": "^6.6.6",
+    "framework_cypress": "file:",
+    "mochawesome": "^7.1.3"
+  }
+}
