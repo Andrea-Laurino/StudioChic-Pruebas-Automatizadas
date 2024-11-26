@@ -19,7 +19,7 @@ describe("Automated Test Case", () => {
         cy.get('#formBasicEmail').type('lita@gmail.com');
         cy.get('#formBasicPassword').type('098clave');
         cy.get('.login').click();    
-        // wait para esperar que los productos esten disponibles
+        // wait para esperar que los productos esten disponiblesss
         cy.wait(5000)
         //seleccionamos el listado de productos
         cy.get('[href="/products"]').click();
