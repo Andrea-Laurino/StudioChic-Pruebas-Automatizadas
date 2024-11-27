@@ -10,6 +10,7 @@ describe("Automated Test Case", () => {
     beforeEach("Login StudioChic with userInvalid", () => {
         // Accede a la URL de la página principal 
         cy.visit("/");
+        //cy.wait(3000);
         // Cargar los datos  del archivo JSON que contiene las credenciales de usuarios validos
         cy.fixture("./auth/userInvalid").then((test) => (
           // Asigna los datos cargados del JSON a la variable global
@@ -28,9 +29,9 @@ describe("Automated Test Case", () => {
         cy.btn(start.btn_login)
         
         // Verificar que aparezca la alerta
-        cy.beVisible(error_alert);
+        cy.beVisible(start.error_alert);
         // Verificar el txt de la alerta
-        cy.verifyText(error_alert, data.expectedError);
+        cy.verifyText(start.error_alert, data.expectedError);
 
          // Limpiar los campos del formulario
         cy.get(start.user).clear();

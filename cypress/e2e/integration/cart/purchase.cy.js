@@ -1,49 +1,44 @@
-/// <reference types="cypress" />
+// <reference types="cypress" />
 import cart from "../../selectores/cart";
+import "cypress-real-events";
+
+
 
 describe("Automated Test Case", () => {
-    // variable global
-    let myData;
-
     beforeEach("Login StudioChic with userValid", () => {
-        // Accede a la URL de la página principal 
-        cy.visit("/");
-        // Cargar los datos  del archivo JSON que contiene las credenciales de usuarios validos
-        // cy.fixture("./cart/cart_login").then((test) => (
-        //   // Asigna los datos cargados del JSON a la variable global
-        //     myData = test));
+        cy.fixture('./cart/credentials').then((credenciales) => {
+            cy.visit('/');
+            //cy.wait(3000);
+            //login de un usuario
+            cy.logIn(cart.user, credenciales.email);
+            cy.logIn(cart.password, credenciales.password);
+            cy.btn(cart.btn_login);
+            //Add Products To Cart
+            cy.wait(3000);
+            cy.get(cart.linkProducts).realClick();
+            cy.verifyText(cart.select_titleProducts, cart.msg_titleProducts);
+            cy.beVisible(cart.allProduct);
+            cy.btn(cart.oneProduct);
+            cy.btn(cart.addToCart);
+        });
     });
     
-
     it("purchase a product", () => {
-        cy.get('#formBasicEmail').type('lita@gmail.com');
-        cy.get('#formBasicPassword').type('098clave');
-        cy.get('.login').click();    
-        // wait para esperar que los productos esten disponiblesss
-        cy.wait(5000)
-        //seleccionamos el listado de productos
-        cy.get('[href="/products"]').click();
-        // seleccionamos un producto en particular para realizar la compra y colocamos un timeout para esperar la respuesta de la BBDD.
-        cy.get('[href="/products/7VvvPqyvXdhpdMkDaMZR"] > .productoCard > .card-body', { timeout: 10000 }).click();
-        
-        cy.get('.counter > div > .btn-count').click();
-        cy.get('.contador > a > .btn-login > .login').click();
-        // llenamos formulario para finalizar la compra
-        cy.get('#name').type('lita');
-        cy.get('#address').type('hola123');
-        cy.get('#phone').type('123456789');
-        cy.get('#email').type('lita@gmail.com');
-        // finalizar compra
-        cy.get('.login').click();
-        // Visualizacion de toast verificando que se realizo correctamente la compra
-        cy.get('.Toastify__toast-body').should('be.visible');
-        // clickear en el logo para volver al inicio
-        cy.get('.img-logo').click();
-        // visualizar el mensaje de bienvenido.
-        cy.get('.welcome').should('have.text', 'Bienvenido lita@gmail.com!');
+        //seleccionamos "Terminar Compra"
+        cy.btn(cart.btn_purchase);
+        // Formulario para finalizar Orden de Compra
+        cy.logIn(cart.namePurchase, cart.txtNamePurchase);
+        cy.logIn(cart.addressPurchase, cart.msg_address);
+        cy.logIn(cart.phonePurchase, cart.numberPhone);
+        cy.logIn(cart.emailPurchase, cart.dataEmail);
+        // // seleccionamos "Generar odern de compra"
+        cy.btn(cart.btn_login);
+        // chequeamos que se haya generado la orden de compra
+        cy.beVisible(cart.checkoutToast);
+        cy.wait(4000)
+        //cerramos sesion
+        cy.btn(cart.btn_logout)
 
-        
     });
-        
-    
+
 });

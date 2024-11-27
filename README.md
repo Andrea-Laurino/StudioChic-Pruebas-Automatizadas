@@ -1,11 +1,11 @@
 <img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-<h2 align="center"> StudioChic - Pruebas Automatizadas con Cypress 👩‍💻 </h2>
+<h2 align="center"> Pruebas Automatizadas con Cypress 👩‍💻 </h2>
 
 
 <div id="user-content-toc">
   <ul align="center">
-    Este repositorio contiene un **proyecto propio** en el que desarrollé y realicé pruebas automatizadas para un e-commerce. El objetivo principal fue garantizar la calidad y funcionalidad de las principales características de la plataforma.
+   Este repositorio contiene un proyecto propio en el que desarrollé y realicé pruebas automatizadas en un proyecto propio. El objetivo principal fue garantizar la calidad y funcionalidad de las principales características de la plataforma.
   <ul>
 </div>
 

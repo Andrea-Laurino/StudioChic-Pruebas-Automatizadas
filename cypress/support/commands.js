@@ -13,3 +13,8 @@ Cypress.Commands.add("beVisible", (selector) => {
 Cypress.Commands.add("verifyText", (selector, texto) => {
     cy.get(selector).should('have.text', texto);
 });
+
+
+
+
+

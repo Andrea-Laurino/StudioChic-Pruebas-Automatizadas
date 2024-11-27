@@ -8,6 +8,7 @@ describe("Automated Test Case", () => {
     beforeEach("Register StudioChic", () => {
         // Accede a la URL de la página principal 
         cy.visit("/");
+        //cy.wait(3000);
         // Cargar los datos  del archivo JSON que contiene las credenciales de usuarios validos
         cy.fixture("./auth/register.json").then((test) => (
           // Asigna los datos cargados del JSON a la variable global
@@ -29,9 +30,11 @@ describe("Automated Test Case", () => {
         
         // Verificar que el mensaje de bienvenida sea el esperado
         cy.beVisible(registration.selec_toastify)
+        cy.wait(5000);
+        
         // verificar que el Toastify desaparezca antes de hacer click en el botón de cerrar sesión
         // Espera hasta que el toast ya no esté en el DOM, por eso se coloca timeout
-        cy.get(registration.selec_toastify, { timeout: 10000 }).should("not.exist");
+        cy.get(registration.selec_toastify).should("not.exist");
         
         // Verificar que el mensaje de bienvenida sea el esperado
         // Variable dinamica por que el mensaje esperado interactua con el usuario ingresado.
@@ -40,10 +43,11 @@ describe("Automated Test Case", () => {
         
         // Hacer clic en el botón de cerrar sesión
         cy.btn(registration.btn_logout)
+        cy.wait(5000);
         
         // verificar que el Toastify desaparezca antes de hacer click en el botón de cerrar sesión
         // Espera hasta que el toast ya no esté en el DOM, por eso se coloca timeout
-        cy.get(registration.selec_toastify, { timeout: 10000 }).should("not.exist");
+        cy.get(registration.selec_toastify).should("not.exist");
         
         // Verificar que el formulario de login es visible nuevamente después de cerrar sesión
         cy.beVisible(registration.selec_form)
