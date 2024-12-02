@@ -4,6 +4,9 @@ module.exports = defineConfig({
   projectId: '86wb9p',
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
+    //centrar el scroll (false, nearest y center)
+    //Desplaza solo lo necesario para mostrarlo.
+    scrollBehavior: 'nearest', 
     // seteamos un timeout global
     defaultCommandTimeout: 4000,
     //conf para generar videos

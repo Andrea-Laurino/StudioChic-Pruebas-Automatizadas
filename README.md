@@ -44,34 +44,39 @@ StudioChic es un e-commerce diseñado para ofrecer una experiencia de compra int
 
 ```plaintext
 ├── cypress/
-│    ├── downloads/                                # Carpeta para descargas de archivos (si aplica)
-│    ├── e2e/                                      # Pruebas E2E (End-to-End)
-│    │   ├── integration/                          # Pruebas E2E específicas
-│    │   │   ├── auth/                             # Pruebas relacionadas con login y registro de usuarios
-│    │   │   │   ├── loginUserInvalid.cy.js        # Prueba de login con usuarios inválidos
-│    │   │   │   ├── loginUserValid.cy.js          # Prueba de login con usuarios válidos
-│    │   │   │   └── register.cy.js                # Prueba de registro de usuarios válidos
-│    │   │   ├── cart/                             # Pruebas de funcionalidad del carrito de compras
-│    │   │   │   └── purchase.cy.js                # Prueba de compra de un producto en el carrito
-│    │   │   └── products/                         # Pruebas de visualización y acción sobre productos
-│    │   │       └── addToCart.cy.js               # Prueba de agregar productos al carrito
-│    ├── selectores/                               # Archivos que contienen los selectores de la aplicación
-│    │   ├── cart.js                               # Selectores para el carrito de compras
-│    │   ├── login.js                              # Selectores para el login 
-│    │   └── register.js                           # Selectores para el registro
-│    ├── fixtures/                                 # Datos ficticios para pruebas (mock data)
-│    │   ├── auth/                                 # Datos para pruebas de autenticación
-│    │   │    ├── register.json                    # Datos de prueba para el registro de usuarios
-│    │   │    ├── userInvalid.json                 # Datos de prueba para usuarios inválidos en login
-│    │   │    └── userValid.json                   # Datos de prueba para usuarios válidos en login
-│    │   ├── cart/                                 # Datos para pruebas del carrito
-│    │   │    └── cart_login.json                  # Datos de prueba para login y form de compra del carrito
-│    ├── support/                                  # Comandos personalizados y configuraciones de Cypress
-│    │   ├── commands.js                           # Funciones personalizadas utilizadas en las pruebas
-│    │   └── e2e.js                                # Configuración global y setup para las pruebas E2E
-├── reports/                                       # Carpeta para los reportes generados de las pruebas
-├── cypress.config.js                              # Archivo de configuración de Cypress
-├── package-lock.json                              # Archivo de dependencias bloqueadas
-├── package.json                                   # Archivo de configuración de dependencias del proyecto
-└── README.md                                      # Documentación del proyecto
+│    ├── downloads/                              # Carpeta para descargas de archivos (si aplica)
+│    ├── e2e/                                    # Pruebas E2E (End-to-End)
+│    │   ├── integration/                        # Pruebas E2E específicas
+│    │   │   ├── auth/                           # Pruebas relacionadas con login y registro de usuarios
+│    │   │   │   ├── loginUserInvalid.cy.js      # Prueba de login con usuarios inválidos
+│    │   │   │   ├── loginUserValid.cy.js        # Prueba de login con usuarios válidos
+│    │   │   │   └── register.cy.js              # Prueba de registro de usuarios válidos
+│    │   │   ├── cart/                           # Pruebas de funcionalidad del carrito de compras
+│    │   │   │   └── purchase.cy.js              # Prueba de compra de un producto en el carrito
+│    │   │   └── products/                       # Pruebas de visualización y acción sobre productos
+│    │   │       └── addToCart.cy.js             # Prueba de agregar productos al carrito
+│    ├── selectores/                             # Archivos que contienen los selectores de la aplicación
+│    │   ├── cart.js                             # Selectores para el carrito de compras
+│    │   ├── login.js                            # Selectores para el login 
+│    │   └── register.js                         # Selectores para el registro
+│    ├── fixtures/                               # Datos ficticios para pruebas (mock data)
+│    │   ├── auth/                               # Datos para pruebas de autenticación
+│    │   │    ├── register.json                  # Datos de prueba para el registro de usuarios
+│    │   │    ├── userInvalid.json               # Datos de prueba para usuarios inválidos en login
+│    │   │    └── userValid.json                 # Datos de prueba para usuarios válidos en login
+│    │   ├── cart/                               # Datos para pruebas del carrito
+│    │   │    └── cart_login.json                # Datos de prueba para login y form de compra del carrito
+│    ├── support/                                # Comandos personalizados y configuraciones de Cypress
+│    │   ├── commands.js                         # Funciones personalizadas utilizadas en las pruebas
+│    │   └── e2e.js                              # Configuración global y setup para las pruebas E2E
+├── reports/                                     # Carpeta para los reportes generados de las pruebas
+│    ├── asserts/                                # Archivos de referencia para validar resultados de la prueba
+│    ├── screenshorts/                           # Almacenamiento de imagenes de las pruebas fallidas
+│    ├── videos/                                 # Almacenamiento de videos de las pruebas fallidas
+│    └──index.html                               # Reporte final de pruebas ejecutadas.
+├── screenshorts/                                # Almacenamiento de imagenes de las pruebas fallidas
+├── cypress.config.js                            # Archivo de configuración de Cypress
+├── package-lock.json                            # Archivo de dependencias bloqueadas
+├── package.json                                 # Archivo de configuración de dependencias del proyecto
+└── README.md                                    # Documentación del proyecto
 
