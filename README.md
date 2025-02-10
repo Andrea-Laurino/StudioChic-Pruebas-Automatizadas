@@ -5,7 +5,7 @@
 
 <div id="user-content-toc">
   <ul align="center">
-   Este repositorio contiene un proyecto propio en el que desarrollé y realicé pruebas automatizadas en un proyecto propio. El objetivo principal fue garantizar la calidad y funcionalidad de las principales características de la plataforma.
+   Este repositorio contiene un proyecto propio en el que desarrollé y realicé pruebas automatizadas. El objetivo principal fue garantizar la calidad y funcionalidad de las principales características de la plataforma.
   <ul>
 </div>
 
